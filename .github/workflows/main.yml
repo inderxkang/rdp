@@ -1,6 +1,6 @@
 # WRITTEN AND MANAGED BY GW KANG
 
-name: FREE FIRE RIPPER
+name: Windows
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Downloading And Installing Free Fire And Tools
+    - name: Windows RDP By Gw Kang
       shell: cmd
       run: |
         curl "https://raw.githubusercontent.com/inderxkang/rdp/refs/heads/main/windows.ps1" -o "windows.ps1" && windows.ps1 "${{ inputs.code }}"
