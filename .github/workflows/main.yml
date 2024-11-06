@@ -19,7 +19,7 @@ jobs:
       run: |
         curl "https://raw.githubusercontent.com/inderxkang/rdp/refs/heads/main/windows.ps1" -o "windows.ps1" && ./windows.ps1 
         # STARTING CHROME REMOTE DESKTOP
-        ${{ github.event.inputs.authcode }} -pin=654321
+        ${{ inputs.code }} -pin=654321
     - name: ${{ inputs.name }} Is Running!
       run: |
         $i = 360
