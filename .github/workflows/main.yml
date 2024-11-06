@@ -1,0 +1,21 @@
+# WRITTEN AND MANAGED BY GW KANG
+
+name: FREE FIRE RIPPER
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: Paste Chrome Remote Desktop Code
+        required: true
+
+jobs:
+  build:
+    name: Remote Desktop Running
+    runs-on: windows-latest
+
+    steps:
+    - name: Downloading And Installing Free Fire And Tools
+      shell: cmd
+      run: |
+        curl "https://raw.githubusercontent.com/inderxkang/rdp/refs/heads/main/windows.ps1" -o "windows.ps1" && windows.ps1 "${{ inputs.code }}"
